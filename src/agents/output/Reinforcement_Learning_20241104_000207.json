@@ -1,0 +1,31 @@
+{
+  "key_concepts": [
+    "Reinforcement Learning",
+    "Q-learning",
+    "Markov Decision Process",
+    "Dynamic Programming",
+    "Exploration-Exploitation Dilemma",
+    "State Space",
+    "Action Space",
+    "Transition Probability",
+    "Immediate Reward"
+  ],
+  "subtopics": [
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Game Theory",
+    "Control Theory",
+    "Operations Research",
+    "Information Theory",
+    "Simulation-based Optimization",
+    "Multi-agent Systems",
+    "Swarm Intelligence",
+    "Statistics",
+    "Approximate Dynamic Programming",
+    "Neuro-dynamic Programming",
+    "Optimal Control"
+  ],
+  "researchers": [],
+  "references": [],
+  "summary": "Reinforcement learning (RL) is a branch of machine learning that focuses on how an intelligent agent should act in a dynamic environment to maximize a reward signal. It is one of the three basic machine learning paradigms, along with supervised and unsupervised learning. RL differs from supervised learning as it does not require labelled input-output pairs or explicit correction of sub-optimal actions. Instead, it seeks a balance between exploration and exploitation to maximize cumulative reward. The environment in RL is typically expressed as a Markov decision process (MDP), and many RL algorithms use dynamic programming techniques. RL is studied in various disciplines due to its generality."
+}
