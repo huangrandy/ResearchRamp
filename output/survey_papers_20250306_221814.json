@@ -1,0 +1,118 @@
+{
+  "Reinforcement learning in robotics": [
+    {
+      "title": "Guided Reinforcement Learning: A Review and Evaluation for Efficient and Effective Real-World Robotics [Survey]",
+      "first_author": "Julian E\u00dfer",
+      "year": 2023,
+      "citation_count": 13,
+      "url": "https://www.semanticscholar.org/paper/adffce4a8e1e87bbe1e16615c16fb632cfbf0d59",
+      "is_open_access": true,
+      "abstract": "Recent successes aside, reinforcement learning (RL) still faces significant challenges in its application to the real-world robotics domain. Guiding the learning process with additional knowledge offe..."
+    },
+    {
+      "title": "Reinforcement Learning for Pick and Place Operations in Robotics: A Survey",
+      "first_author": "Andrew Lobbezoo",
+      "year": 2021,
+      "citation_count": 40,
+      "url": "https://www.semanticscholar.org/paper/920b3d3a481bfad07a90e2863305fab8a4ce6148",
+      "is_open_access": true,
+      "abstract": "The field of robotics has been rapidly developing in recent years, and the work related to training robotic agents with reinforcement learning has been a major focus of research. This survey reviews t..."
+    },
+    {
+      "title": "Deep Generative Models in Robotics: A Survey on Learning from Multimodal Demonstrations",
+      "first_author": "Julen Urain",
+      "year": 2024,
+      "citation_count": 10,
+      "url": "https://www.semanticscholar.org/paper/5d2b77db076779b4a4058acf056e473faf4f7fdd",
+      "is_open_access": false,
+      "abstract": "Learning from Demonstrations, the field that proposes to learn robot behavior models from data, is gaining popularity with the emergence of deep generative models. Although the problem has been studie..."
+    }
+  ],
+  "Adaptive object manipulation": [
+    {
+      "title": "Deep Domain Adaptive Object Detection: a Survey",
+      "first_author": "Wanyi Li",
+      "year": 2020,
+      "citation_count": 60,
+      "url": "https://www.semanticscholar.org/paper/29ee75ca62f520897b69782b849b953138db08a2",
+      "is_open_access": true,
+      "abstract": "Deep learning (DL) based object detection has achieved great progress. These methods typically assume that large amount of labeled training data is available, and training and test data are drawn from..."
+    },
+    {
+      "title": "A Survey on Deep Reinforcement Learning Algorithms for Robotic Manipulation",
+      "first_author": "Dong-Ki Han",
+      "year": 2023,
+      "citation_count": 94,
+      "url": "https://www.semanticscholar.org/paper/aee25ec357bfb8b4422e04630bc46c8f5a03a695",
+      "is_open_access": true,
+      "abstract": "Robotic manipulation challenges, such as grasping and object manipulation, have been tackled successfully with the help of deep reinforcement learning systems. We give an overview of the recent advanc..."
+    },
+    {
+      "title": "Learning by Watching: A Review of Video-based Learning Approaches for Robot Manipulation",
+      "first_author": "Chrisantus Eze",
+      "year": 2024,
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/e0bd7e8a63ec38e0ceb5d408aa2ee9067e96c94f",
+      "is_open_access": false,
+      "abstract": "Robot learning of manipulation skills is hindered by the scarcity of diverse, unbiased datasets. While curated datasets can help, challenges remain in generalizability and real-world transfer. Meanwhi..."
+    }
+  ],
+  "Computer vision for robotic grasping": [
+    {
+      "title": "A Brief Survey on Leveraging Large Scale Vision Models for Enhanced Robot Grasping",
+      "first_author": "Abhi Kamboj",
+      "year": 2024,
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/cf45f7b3f061627a718cb7d63d08faaaf541ccd2",
+      "is_open_access": false,
+      "abstract": "Robotic grasping presents a difficult motor task in real-world scenarios, constituting a major hurdle to the deployment of capable robots across various industries. Notably, the scarcity of data makes..."
+    },
+    {
+      "title": "A Survey: Robot Grasping",
+      "first_author": "Kenechi F. Dukor",
+      "year": 2021,
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/e9a750ff919abc5625f57ecfb52bd804c9320ef9",
+      "is_open_access": false,
+      "abstract": "The \ufb01eld of autonomous robotics has made signi\ufb01cant progress with the advent of learning methods that have been successfully applied in robotics and have achieved tremendous accuracy. Today, we can ob..."
+    },
+    {
+      "title": "Robotic Grasping Based on Deep Learning: A Survey",
+      "first_author": "Mayada Abdalsalam Rashed",
+      "year": 2023,
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/9ab97a11a48a49e17e7b74143937e2d251720b5d",
+      "is_open_access": false,
+      "abstract": "The progress achieved in the robotics field in the last decade made the deployment of robots possible in real - world. One of the essential skills required to do these tasks is object grasping and pla..."
+    }
+  ],
+  "Self-improving robotic systems": [
+    {
+      "title": "A Review of Farming Aerial Mobile Robotic Systems and Proposal for Space Bio-Automation and Agriculture Applications",
+      "first_author": "R. Barreto",
+      "year": 2023,
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/a0faa6bc4bd4f8d8a80f390821b36a83fc671c92",
+      "is_open_access": false,
+      "abstract": "New technological advances have brought tools to increase the scope of the human outside the world. However, it is necessary more research to achieve the challenges of leaving the earth. Thus, some so..."
+    },
+    {
+      "title": "Review of PID Control in Industrial Areas for Tobacco Production, Self-driving Car Technology and Robotic Arm Robots",
+      "first_author": "Linxiaoshan Zhang",
+      "year": 2024,
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/bee56fbaa863a7ba57387c6530ad249c4c8babb5",
+      "is_open_access": true,
+      "abstract": "Abstract. PID control is widely employed across diverse industries such as tobacco production, autonomous car technology, and mechanical arm robotics. This shows that PID control has a substantial dev..."
+    },
+    {
+      "title": "Self-Immolative Domino Dendrimers as Anticancer-Drug Delivery Systems: A Review",
+      "first_author": "Karolina K\u0119dra",
+      "year": 2024,
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/3dd282e0e44d64ee758db37d1712b5d7d8cded01",
+      "is_open_access": true,
+      "abstract": "Worldwide cancer statistics have indicated about 20 million new cancer cases and over 10 million deaths in 2022 (according to data from the International Agency for Research on Cancer). One of the lea..."
+    }
+  ]
+}
