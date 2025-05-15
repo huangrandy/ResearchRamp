@@ -17,12 +17,16 @@ def build_tree_graph(project_title, core_concepts, pruned_papers, foundational_t
         # Add pruned selected papers as children of core concepts
         for paper in pruned_papers.get(core, []):
             metadata = paper_metadata.get(paper, {})
+            foundational_topic_names = [
+                topic_entry.get("topic", "Unknown Topic") for topic_entry in foundational_topics.get(paper, [])
+            ]
             metadata_str = (
                 f"Paper: {paper}\n"
                 f"Authors: {metadata.get('authors', 'Unknown')}\n"
                 f"Year: {metadata.get('year', 'Unknown')}\n"
                 f"DOI: {metadata.get('doi', 'N/A')}\n"
-                f"URL: {metadata.get('url', 'N/A')}"
+                f"URL: {metadata.get('url', 'N/A')}\n"
+                f"Foundational Topics: {', '.join(foundational_topic_names) if foundational_topic_names else 'None'}"
             )
             G.add_node(paper, metadata=metadata_str, group=core, interactive=True, level=2)
             G.add_edge(core, paper)
@@ -30,9 +34,7 @@ def build_tree_graph(project_title, core_concepts, pruned_papers, foundational_t
             # Add foundational topics as children of each paper
             for topic_entry in foundational_topics.get(paper, []):
                 topic = topic_entry.get("topic", "Unknown Topic")
-                print(topic)
                 resource = topic_entry.get("resource", "No Resource Provided")
-                print(resource)
                 metadata_str = (
                     f"Foundational Topic: {topic}\n"
                     f"Resource: {resource}"

@@ -42,7 +42,7 @@ class ConceptExtractionAgent:
           Avoid listing concepts that are introduced or developed as part of the project itself.
         - Fundamental Concepts: These are foundational to the core concepts and provide the necessary theoretical or technical background 
           to understand and work with the core concepts. They are more advanced than prerequisites but not as specific as core concepts. 
-          Examples: Machine Learning Basics, Deep Learning, Robotic Kinematics, Control Theory.
+          Examples: Machine Learning, Deep Learning, Robotic Kinematics, Control Theory.
         - Core Concepts: These are the central focus areas of the project and represent the main topics or themes the project is addressing. 
           They are typically the tags or keywords associated with the project. 
           Examples: Reinforcement Learning (RL), Computer Vision, Robotics.
