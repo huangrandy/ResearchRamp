@@ -10,6 +10,8 @@ class Agent:
         """
         Query the GPT model with the given instructions and input text.
         """
+        instructions += " For the json, do NOT include tick marks or any other formatting. Just ONLY provide the JSON object."
+
         response = openai.OpenAI(api_key=self.api_key).responses.create(
             model=self.model,
             instructions=instructions,
