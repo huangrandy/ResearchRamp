@@ -1,48 +1,43 @@
 import networkx as nx
 
-def build_tree_graph(project_title, core_concepts, pruned_papers, foundational_topics, paper_metadata):
+
+def build_tree_graph(
+    project_title,
+    core_concepts,
+    pruned_selected_papers,
+    foundational_topics,
+):
     """
-    Build a tree graph for visualization.
+    Build a tree graph representing the relationships between the project title, core concepts,
+    selected papers, and foundational topics.
     """
     G = nx.DiGraph()
 
-    # Add root node
-    G.add_node(project_title, metadata=f"Project Title: {project_title}", group="root", interactive=True, level=0)
+    # Add the project title as the root node
+    G.add_node(project_title, group="project_title", metadata="Project Title")
 
-    # Add core concepts as children of the root
-    for core_index, core in enumerate(core_concepts):
-        G.add_node(core, metadata=f"Core Concept: {core}", group=core, interactive=True, level=1)
-        G.add_edge(project_title, core)
+    # Add core concepts as children of the project title
+    for concept in core_concepts:
+        G.add_node(concept, group="core_concept", metadata="Core Concept")
+        G.add_edge(project_title, concept)
 
-        # Add pruned selected papers as children of core concepts
-        for paper in pruned_papers.get(core, []):
-            metadata = paper_metadata.get(paper, {})
-            foundational_topic_names = [
-                topic_entry.get("topic", "Unknown Topic") for topic_entry in foundational_topics.get(paper, [])
-            ]
-            metadata_str = (
-                f"Paper: {paper}\n"
-                f"Authors: {metadata.get('authors', 'Unknown')}\n"
-                f"Year: {metadata.get('year', 'Unknown')}\n"
-                f"DOI: {metadata.get('doi', 'N/A')}\n"
-                f"URL: {metadata.get('url', 'N/A')}\n"
-                f"Foundational Topics: {', '.join(foundational_topic_names) if foundational_topic_names else 'None'}"
+        # Add selected papers as children of core concepts
+        for paper in pruned_selected_papers.get(concept, []):
+            # paper_metadata_entry = paper_metadata.get(paper, {})
+            G.add_node(
+                paper,
+                group="seminal_paper",
+                metadata=f"Seminal Paper",
             )
-            G.add_node(paper, metadata=metadata_str, group=core, interactive=True, level=2)
-            G.add_edge(core, paper)
+            G.add_edge(concept, paper)
 
-            # Add foundational topics as children of each paper
-            for topic_entry in foundational_topics.get(paper, []):
-                topic = topic_entry.get("topic", "Unknown Topic")
-                resource = topic_entry.get("resource", "No Resource Provided")
-                metadata_str = (
-                    f"Foundational Topic: {topic}\n"
-                    f"Resource: {resource}"
+            # Add foundational topics as children of selected papers
+            for topic in foundational_topics.get(paper, []):
+                G.add_node(
+                    topic["topic"],
+                    group="foundational_topic",
+                    metadata=f"Foundational Topic\nResource: {topic.get('resource', 'No resource available')}",
                 )
-                # Ensure the topic node exists
-                if not G.has_node(topic):
-                    G.add_node(topic, metadata=metadata_str, group=core, interactive=True, level=3)
-                # Add an edge from the paper to the topic
-                G.add_edge(paper, topic)
+                G.add_edge(paper, topic["topic"])
 
     return G

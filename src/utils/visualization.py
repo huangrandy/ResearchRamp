@@ -6,15 +6,21 @@ def visualize(G, output_file="tree_graph.html"):
     Visualize the tree graph using pyvis with full drag-and-drop functionality for nodes.
     Differentiate node types with distinct colors or appearances.
     """
-    net = Network(notebook=True, directed=True)
+    net = Network(notebook=True, directed=True, height="600px", width="100%")
 
     # Define styles for different node types
     node_styles = {
         "project_title": {"background": "#FFD700", "border": "#DAA520"},  # Gold
-        "core_concept": {"background": "#87CEEB", "border": "#4682B4"},   # Light Blue
-        "seminal_paper": {"background": "#87CEEB", "border": "#4682B4"},  # Light Blue (same as core concepts)
-        "foundational_topic": {"background": "#87CEEB", "border": "#4682B4"},  # Light Blue (same as core concepts)
-        "default": {"background": "white", "border": "black"},            # Default
+        "core_concept": {"background": "#87CEEB", "border": "#4682B4"},  # Light Blue
+        "seminal_paper": {
+            "background": "#87CEEB",
+            "border": "#4682B4",
+        },  # Light Blue (same as core concepts)
+        "foundational_topic": {
+            "background": "#87CEEB",
+            "border": "#4682B4",
+        },  # Light Blue (same as core concepts)
+        "default": {"background": "white", "border": "black"},  # Default
     }
 
     for node, data in G.nodes(data=True):
@@ -25,7 +31,7 @@ def visualize(G, output_file="tree_graph.html"):
             title=data.get("metadata", ""),
             label=node,
             group=node_type,  # Assign group for filtering
-            color=style,      # Apply color based on type
+            color=style,  # Apply color based on type
         )
 
     for source, target in G.edges():
@@ -37,15 +43,19 @@ def visualize(G, output_file="tree_graph.html"):
         {
           "layout": {
             "hierarchical": {
-              "enabled": false
+              "enabled": false,
+              "direction": "UD",
+              "sortMethod": "directed",
+              "nodeSpacing": 200, 
+              "treeSpacing": 300 
             }
           },
           "nodes": {
             "font": {
               "multi": true,
-              "size": 10
+              "size": 20
             },
-            "size": 15,
+            "size": 25,
             "shape": "box",
             "widthConstraint": {
               "maximum": 200
@@ -63,7 +73,7 @@ def visualize(G, output_file="tree_graph.html"):
             },
             "solver": "forceAtlas2Based",
             "forceAtlas2Based": {
-              "gravitationalConstant": -200,
+              "gravitationalConstant": -100,
               "centralGravity": 0.01,
               "springLength": 200,
               "springConstant": 0.05
