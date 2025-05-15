@@ -23,11 +23,14 @@ def build_tree_graph(
 
         # Add selected papers as children of core concepts
         for paper in pruned_selected_papers.get(concept, []):
-            # paper_metadata_entry = paper_metadata.get(paper, {})
+            # Extract foundational topics for the paper
+            paper_foundational_topics = [
+                topic["topic"] for topic in foundational_topics.get(paper, [])
+            ]
             G.add_node(
                 paper,
                 group="seminal_paper",
-                metadata=f"Seminal Paper",
+                metadata=f"Seminal Paper\nFoundational Topics: {', '.join(paper_foundational_topics) if paper_foundational_topics else 'None'}",
             )
             G.add_edge(concept, paper)
 
