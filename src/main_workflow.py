@@ -12,6 +12,9 @@ from utils.seminal_works import query_seminal_works
 from utils.prune_papers import prune_papers
 from utils.foundational_topics import find_foundational_topics_and_resources
 import sys
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 
 def extract_project_concepts(project, concept_agent):
@@ -36,8 +39,8 @@ def extract_project_concepts(project, concept_agent):
 
 def main(project="robotics"):
     # Setup
-    notebook_dir = os.getcwd()
-    queries_folder = os.path.join(notebook_dir, "..", "queries")
+    notebook_dir = os.path.dirname(os.path.abspath(__file__))
+    queries_folder = os.path.abspath(os.path.join(notebook_dir, "..", "queries"))
     gpt_agent = Agent(api_key=os.getenv("OPENAI_API_KEY"))
     concept_agent = ConceptExtractionAgent(gpt_agent, queries_folder=queries_folder)
 
