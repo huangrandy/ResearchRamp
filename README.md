@@ -49,4 +49,4 @@ Replace `<project_name>` with the desired project file name, which are located i
 
 Currently the only projects that exist are `db`, `hci`, `network`, `nlp`, `robotics`, but you may create your own project JSON file, assuming the same format as the existing files.
 
-After running the application, the knowledge graph HTML file (located in /src) can be viewed in the browser for visualization.
+After running the application, the knowledge graph HTML file (located in the root directory) can be viewed in the browser for visualization.
