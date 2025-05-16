@@ -1,7 +1,7 @@
 from pyvis.network import Network
 
 
-def visualize(G, output_file="tree_graph.html"):
+def visualize(G, output_file="knowledge_graph.html"):
     """
     Visualize the tree graph using pyvis with full drag-and-drop functionality for nodes.
     Differentiate node types with distinct colors or appearances.

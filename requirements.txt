@@ -1,12 +1,8 @@
-fastapi==0.104.1
-uvicorn==0.24.0
 langchain
 langchain-openai
 langgraph
 openai
-wikipedia-api
 networkx==3.2.1
-beautifulsoup4==4.12.2
 pydantic
 python-dotenv
 pytest
