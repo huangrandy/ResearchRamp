@@ -2,19 +2,6 @@
 
 ResearchRamp is an AI-powered academic paper analysis tool that helps researchers understand and explore relationships between research papers, concepts, and seminal works in their field. The system uses advanced AI techniques to analyze papers and create interactive visualizations of research networks.
 
-## 🎯 Introduction
-
-ResearchRamp addresses several key challenges in academic research:
-
-1. **Information Overload**: With thousands of papers published daily, researchers struggle to keep up with relevant literature. ResearchRamp helps by:
-   - Automatically extracting key concepts from papers
-   - Identifying relationships between papers and concepts
-   - Creating visual maps of research networks
-
-2. **Research Discovery**: Finding relevant papers and understanding their relationships is time-consuming. ResearchRamp provides:
-   - Concept relationship mapping
-   - Interactive visualization of research networks
-
 ## ⚙️ Prerequisites
 - Python 3.12.7 or higher
 - OpenAI API key access
