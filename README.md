@@ -246,9 +246,6 @@ kill -9 <process_id>
 - **Video Tutorials**: Step-by-step video guides
 - **Community Forum**: Platform for user discussions and support
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
